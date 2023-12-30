@@ -16,7 +16,7 @@ const YourComponent = () => {
     const fetchIds = async () => {
       try {
         const response = await fetch(
-          "https://quala-project.onrender.com/api/extract/getIds"
+          "https://sparkly-vacherin-97b1af.netlify.app/api/extract/getIds"
         );
         const data = await response.json();
         setData(data);
@@ -30,7 +30,7 @@ const YourComponent = () => {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://quala-project.onrender.com/api/extract/delete/${id}`, {
+      await fetch(`https://sparkly-vacherin-97b1af.netlify.app/api/extract/delete/${id}`, {
         method: "DELETE",
       });
       const updatedData = data.filter((item) => item.id !== id);
@@ -42,7 +42,7 @@ const YourComponent = () => {
 
   const handleUpdate = async (id) => {
     try {
-      await fetch(`https://quala-project.onrender.com/api/extract/update/${id}`, {
+      await fetch(`https://sparkly-vacherin-97b1af.netlify.app/api/extract/update/${id}`, {
         method: "PUT",
         body: JSON.stringify(formData),
         headers: {
